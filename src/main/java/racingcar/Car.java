@@ -9,7 +9,9 @@ public class Car {
     }
 
     public void move() {
-
+        if(RandomMove.canMove()) {
+            position++;
+        }
     }
 
     public int getPosition() {
