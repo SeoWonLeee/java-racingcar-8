@@ -8,6 +8,8 @@ public class RacingGame {
     private final int attempt;
 
     public RacingGame(List<Car> cars, int attempt) {
+        if (cars == null || cars.isEmpty()) throw new IllegalArgumentException("자동차가 필요합니다.");
+        if (attempt <= 0) throw new IllegalArgumentException("시도 횟수는 1 이상이어야 합니다.");
         this.cars = cars;
         this.attempt = attempt;
     }
